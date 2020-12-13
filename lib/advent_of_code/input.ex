@@ -82,6 +82,7 @@ defmodule AdventOfCode.Input do
   defp config, do: Application.get_env(:advent_of_code, __MODULE__)
   defp allow_network?, do: Keyword.get(config(), :allow_network?, false)
 
-  defp headers,
-    do: [{'cookie', String.to_charlist("session=" <> Keyword.get(config(), :session_cookie))}]
+  defp headers do
+    [{'cookie', String.to_charlist("session=" <> Keyword.get(config(), :session_cookie))}]
+  end
 end

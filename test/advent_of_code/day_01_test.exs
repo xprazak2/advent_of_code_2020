@@ -8,7 +8,7 @@ defmodule AdventOfCode.Day01Test do
     input = nil
     result = part1(input)
 
-    assert result
+    assert_equal 2020, result
   end
 
   @tag :skip
